@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA48F94F28F420B000053C06 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48F94E28F420B000053C06 /* WelcomeView.swift */; };
+		CA48F95128F420F000053C06 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA48F95028F420F000053C06 /* Colors.xcassets */; };
+		CA48F95328F4210600053C06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA48F95228F4210600053C06 /* Images.xcassets */; };
 		CAE7C33A28F41D9B00284CA6 /* SnackOverflowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */; };
 		CAE7C33B28F41D9B00284CA6 /* SnackOverflowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */; };
 		CAE7C33C28F41D9B00284CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7C32B28F41D9A00284CA6 /* ContentView.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA48F94E28F420B000053C06 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		CA48F95028F420F000053C06 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CA48F95228F4210600053C06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackOverflowApp.swift; sourceTree = "<group>"; };
 		CAE7C32B28F41D9A00284CA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAE7C32C28F41D9B00284CA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,22 +47,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA48F94928F4203B00053C06 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CA48F94A28F4204A00053C06 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				CA48F94C28F4206200053C06 /* Auth */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		CA48F94B28F4204E00053C06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CAE7C32C28F41D9B00284CA6 /* Assets.xcassets */,
+				CA48F95028F420F000053C06 /* Colors.xcassets */,
+				CA48F95228F4210600053C06 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CA48F94C28F4206200053C06 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CA48F94D28F420A600053C06 /* Welcome */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CA48F94D28F420A600053C06 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				CA48F94E28F420B000053C06 /* WelcomeView.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		CAE7C32428F41D9A00284CA6 = {
 			isa = PBXGroup;
 			children = (
-				CAE7C32928F41D9A00284CA6 /* Shared */,
-				CAE7C33228F41D9B00284CA6 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		CAE7C32928F41D9A00284CA6 /* Shared */ = {
-			isa = PBXGroup;
-			children = (
+				CA48F94B28F4204E00053C06 /* Resources */,
+				CA48F94A28F4204A00053C06 /* Feature */,
+				CA48F94928F4203B00053C06 /* Utils */,
 				CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */,
 				CAE7C32B28F41D9A00284CA6 /* ContentView.swift */,
-				CAE7C32C28F41D9B00284CA6 /* Assets.xcassets */,
+				CAE7C33228F41D9B00284CA6 /* Products */,
 			);
-			path = Shared;
 			sourceTree = "<group>";
 		};
 		CAE7C33228F41D9B00284CA6 /* Products */ = {
@@ -147,7 +188,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA48F95328F4210600053C06 /* Images.xcassets in Resources */,
 				CAE7C33E28F41D9B00284CA6 /* Assets.xcassets in Resources */,
+				CA48F95128F420F000053C06 /* Colors.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAE7C33C28F41D9B00284CA6 /* ContentView.swift in Sources */,
+				CA48F94F28F420B000053C06 /* WelcomeView.swift in Sources */,
 				CAE7C33A28F41D9B00284CA6 /* SnackOverflowApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

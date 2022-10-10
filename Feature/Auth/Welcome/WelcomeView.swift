@@ -11,48 +11,23 @@ struct WelcomeView: View {
     var body: some View {
         VStack {
             Spacer()
-            Image("app_logo")
+            Image(ImageEnums.appLogo.rawValue)
             Spacer()
-            SocialButton(title: "facebook", backgroundColor: .blue, foregroundColor: .white)
-            SocialButton(title: "google", backgroundColor: .white, foregroundColor: .gray)
-            SocialButton(title: "apple", backgroundColor: .black, foregroundColor: .white)
+            SocialButton(title: ImageEnums.facebook.rawValue, backgroundColor: Color.deepSkyBlue, foregroundColor: .white)
+            SocialButton(title: ImageEnums.google.rawValue, backgroundColor: .white, foregroundColor: .gray)
+            SocialButton(title: ImageEnums.apple.rawValue, backgroundColor: .black, foregroundColor: .white)
             Divider()
                 .frame(width: 230)
                 .frame(height: 2)
                 .overlay(.white)
                 .opacity(0.7)
                 .padding()
-            Button {
-                //action here
-            } label: {
-                HStack {
-                    Spacer()
-                    Text("Sign Up with Email")
-                        .bold()
-                    Spacer()
-                }
-                    .padding(10)
-
-            }
-                .background(.white)
-                .foregroundColor(.orange)
-                .cornerRadius(8)
+            emailButton
 
         }
-        .padding(.horizontal, 10)
-        .padding(.bottom, 20)
-            .background(
-            Image("orange")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-                .offset(x: -32)
-
-
-
-
-
-        )
+            .padding(.horizontal, 10)
+            .padding(.bottom, 20)
+            .background(backgroundImage)
     }
 }
 
@@ -63,26 +38,35 @@ struct WelcomeView_Previews: PreviewProvider {
 }
 
 
-struct SocialButton: View {
-    var title: String
-    var backgroundColor: Color
-    var foregroundColor: Color
-    var body: some View {
+extension WelcomeView {
+    var emailButton: some View {
         Button {
             //action here
         } label: {
             HStack {
-                Image(title)
-                Text("Sign In With \(title)")
+                Spacer()
+                Text("Sign Up with Email")
                     .bold()
                 Spacer()
             }
-                .padding(14)
+                .padding(10)
 
         }
-            .background(backgroundColor)
-            .foregroundColor(foregroundColor)
+            .background(.white)
+            .foregroundColor(.orange)
             .cornerRadius(8)
-            .padding(.vertical, 4)
+
+    }
+
+    var backgroundImage: some View {
+        ZStack{
+            Image(ImageEnums.orange.rawValue)
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+                .offset(x: -32)
+            Color(.red).opacity(0.15).ignoresSafeArea()
+        }
+        
     }
 }

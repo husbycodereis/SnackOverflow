@@ -10,6 +10,9 @@
 		CA48F94F28F420B000053C06 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48F94E28F420B000053C06 /* WelcomeView.swift */; };
 		CA48F95128F420F000053C06 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA48F95028F420F000053C06 /* Colors.xcassets */; };
 		CA48F95328F4210600053C06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA48F95228F4210600053C06 /* Images.xcassets */; };
+		CA48F95A28F42FE800053C06 /* ImageEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48F95928F42FE800053C06 /* ImageEnums.swift */; };
+		CA48F95D28F4307D00053C06 /* SocialButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48F95C28F4307D00053C06 /* SocialButton.swift */; };
+		CA48F96028F4361C00053C06 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA48F95F28F4361C00053C06 /* ColorExtensions.swift */; };
 		CAE7C33A28F41D9B00284CA6 /* SnackOverflowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */; };
 		CAE7C33B28F41D9B00284CA6 /* SnackOverflowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */; };
 		CAE7C33C28F41D9B00284CA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE7C32B28F41D9A00284CA6 /* ContentView.swift */; };
@@ -22,6 +25,9 @@
 		CA48F94E28F420B000053C06 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		CA48F95028F420F000053C06 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		CA48F95228F4210600053C06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CA48F95928F42FE800053C06 /* ImageEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEnums.swift; sourceTree = "<group>"; };
+		CA48F95C28F4307D00053C06 /* SocialButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialButton.swift; sourceTree = "<group>"; };
+		CA48F95F28F4361C00053C06 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		CAE7C32A28F41D9A00284CA6 /* SnackOverflowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackOverflowApp.swift; sourceTree = "<group>"; };
 		CAE7C32B28F41D9A00284CA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CAE7C32C28F41D9B00284CA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -50,6 +56,8 @@
 		CA48F94928F4203B00053C06 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CA48F95E28F4360C00053C06 /* Extensions */,
+				CA48F95828F42FDC00053C06 /* Enums */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -83,9 +91,34 @@
 		CA48F94D28F420A600053C06 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				CA48F95B28F4307000053C06 /* Components */,
 				CA48F94E28F420B000053C06 /* WelcomeView.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		CA48F95828F42FDC00053C06 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				CA48F95928F42FE800053C06 /* ImageEnums.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		CA48F95B28F4307000053C06 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CA48F95C28F4307D00053C06 /* SocialButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CA48F95E28F4360C00053C06 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CA48F95F28F4361C00053C06 /* ColorExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CAE7C32428F41D9A00284CA6 = {
@@ -211,7 +244,10 @@
 			files = (
 				CAE7C33C28F41D9B00284CA6 /* ContentView.swift in Sources */,
 				CA48F94F28F420B000053C06 /* WelcomeView.swift in Sources */,
+				CA48F95D28F4307D00053C06 /* SocialButton.swift in Sources */,
+				CA48F95A28F42FE800053C06 /* ImageEnums.swift in Sources */,
 				CAE7C33A28F41D9B00284CA6 /* SnackOverflowApp.swift in Sources */,
+				CA48F96028F4361C00053C06 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

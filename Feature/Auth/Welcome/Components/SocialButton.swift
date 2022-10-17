@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct SocialButton: View {
-    var title: String
+    var title: LocalizedStringKey
+    var imagePath: String
     var backgroundColor: Color
     var foregroundColor: Color
     var body: some View {
@@ -16,8 +17,8 @@ struct SocialButton: View {
             //action here
         } label: {
             HStack {
-                Image(title)
-                Text("Sign In With \(title)")
+                Image(imagePath)
+                Text(title)
                     .bold()
                 Spacer()
             }

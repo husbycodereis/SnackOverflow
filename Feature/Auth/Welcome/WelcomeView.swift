@@ -9,25 +9,33 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
-        VStack {
-            Spacer()
-            Image(ImageEnums.appLogo.rawValue)
-            Spacer()
-            SocialButton(title: ImageEnums.facebook.rawValue, backgroundColor: Color.deepSkyBlue, foregroundColor: .white)
-            SocialButton(title: ImageEnums.google.rawValue, backgroundColor: .white, foregroundColor: .gray)
-            SocialButton(title: ImageEnums.apple.rawValue, backgroundColor: .black, foregroundColor: .white)
-            Divider()
-                .frame(width: 230)
-                .frame(height: 2)
-                .overlay(.white)
-                .opacity(0.7)
-                .padding()
-            emailButton
+        GeometryReader { geometry in
+            VStack {
+                Spacer()
+                Image(ImageEnums.appLogo.rawValue)
+                Spacer()
+                SocialButton(
+                    title:LocaleKeys.Auth.facebook.rawValue.locale(),
+                    imagePath: ImageEnums.facebook.rawValue, backgroundColor: Color.deepSkyBlue, foregroundColor: .white)
+                SocialButton(
+                    title:LocaleKeys.Auth.facebook.rawValue.locale(),
+                    imagePath: ImageEnums.google.rawValue, backgroundColor: .white, foregroundColor: .gray)
+                SocialButton(
+                    title:LocaleKeys.Auth.facebook.rawValue.locale(),
+                    imagePath: ImageEnums.apple.rawValue, backgroundColor: .black, foregroundColor: .white)
+                Divider()
+                    .frame(width: 230)
+                    .frame(height: 2)
+                    .overlay(.white)
+                    .opacity(0.7)
+                    .padding()
+                emailButton
+                Spacer().frame(height: geometry.dynamicHeight(height: 0.05))
 
-        }
-            .padding(.horizontal, 10)
-            .padding(.bottom, 20)
+            }
+                .padding(.horizontal, 10)
             .background(backgroundImage)
+        }
     }
 }
 
@@ -45,7 +53,7 @@ extension WelcomeView {
         } label: {
             HStack {
                 Spacer()
-                Text("Sign Up with Email")
+                Text(LocaleKeys.Auth.custom.rawValue.locale())
                     .bold()
                 Spacer()
             }
